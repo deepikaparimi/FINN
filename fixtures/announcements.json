@@ -1,0 +1,602 @@
+[
+  {
+    "id": "sample-001-sample-only-illustrative-q2-fy27-con",
+    "ticker": "RELIANCE",
+    "company": "Reliance Industries Limited",
+    "time": "2026-11-14T22:21:48",
+    "subject": "SAMPLE ONLY — illustrative Q2 FY27 consolidated results (fictional figures, not an exchange filing). Q2 FY27: Revenue ₹6910 cr; EBITDA ₹898 cr; PBT ₹726 cr; PAT ₹539 cr. Last quarter: Revenue ₹6634 cr; EBITDA ₹844 cr; PBT ₹675 cr; PAT ₹496 cr. Same quarter last year: Revenue ₹6081 cr; EBITDA ₹754 cr; PBT ₹595 cr; PAT ₹431 cr.",
+    "category": "results",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-002-sample-only-illustrative-q2-fy27-con",
+    "ticker": "HDFCBANK",
+    "company": "HDFC Bank Limited",
+    "time": "2026-11-14T21:54:48",
+    "subject": "SAMPLE ONLY — illustrative Q2 FY27 consolidated results (fictional figures, not an exchange filing). Q2 FY27: Revenue ₹1915 cr; EBITDA ₹272 cr; PBT ₹220 cr; PAT ₹165 cr. Last quarter: Revenue ₹1992 cr; EBITDA ₹283 cr; PBT ₹229 cr; PAT ₹172 cr. Same quarter last year: Revenue ₹2145 cr; EBITDA ₹305 cr; PBT ₹246 cr; PAT ₹185 cr.",
+    "category": "results",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-003-sample-only-illustrative-q2-fy27-con",
+    "ticker": "INFY",
+    "company": "Infosys Limited",
+    "time": "2026-11-14T21:18:48",
+    "subject": "SAMPLE ONLY — illustrative Q2 FY27 consolidated results (fictional figures, not an exchange filing). Q2 FY27: Revenue ₹3490 cr; EBITDA ₹537 cr; PBT ₹436 cr; PAT ₹328 cr. Last quarter: Revenue ₹3350 cr; EBITDA ₹505 cr; PBT ₹405 cr; PAT ₹302 cr. Same quarter last year: Revenue ₹3071 cr; EBITDA ₹451 cr; PBT ₹358 cr; PAT ₹394 cr.",
+    "category": "results",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-004-sample-only-illustrative-q2-fy27-con",
+    "ticker": "TATASTEEL",
+    "company": "Tata Steel Limited",
+    "time": "2026-11-14T20:30:48",
+    "subject": "SAMPLE ONLY — illustrative Q2 FY27 consolidated results (fictional figures, not an exchange filing). Q2 FY27: Revenue ₹7985 cr; EBITDA ₹1326 cr; PBT ₹838 cr; PAT ₹623 cr. Last quarter: Revenue ₹7666 cr; EBITDA ₹1246 cr; PBT ₹779 cr; PAT ₹573 cr. Same quarter last year: Revenue ₹7027 cr; EBITDA ₹1114 cr; PBT ₹687 cr.",
+    "category": "results",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-005-sample-only-board-appoints-an-incomi",
+    "ticker": "SUNPHARMA",
+    "company": "Sun Pharmaceutical Industries Limited",
+    "time": "2026-11-14T19:36:48",
+    "subject": "SAMPLE ONLY — Board appoints an incoming Chief Financial Officer, effective 1 December 2026; profile and terms are illustrative.",
+    "category": "management_change",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-006-sample-only-independent-director-sub",
+    "ticker": "ITC",
+    "company": "ITC Limited",
+    "time": "2026-11-14T18:54:48",
+    "subject": "SAMPLE ONLY — Independent director submits resignation, effective 14 November 2026; reason and details are illustrative.",
+    "category": "management_change",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-007-sample-only-board-recommends-an-inte",
+    "ticker": "LT",
+    "company": "Larsen & Toubro Limited",
+    "time": "2026-11-14T18:18:48",
+    "subject": "SAMPLE ONLY — Board recommends an interim dividend of ₹18 per share; illustrative record date 27 November 2026.",
+    "category": "dividend",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-008-sample-only-board-declares-an-interi",
+    "ticker": "BHARTIARTL",
+    "company": "Bharti Airtel Limited",
+    "time": "2026-11-14T17:42:48",
+    "subject": "SAMPLE ONLY — Board declares an interim dividend of ₹9 per share; illustrative record date 30 November 2026.",
+    "category": "dividend",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-009-sample-only-board-recommends-a-final",
+    "ticker": "MARUTI",
+    "company": "Maruti Suzuki India Limited",
+    "time": "2026-11-14T17:12:48",
+    "subject": "SAMPLE ONLY — Board recommends a final dividend of ₹42 per share, subject to shareholder approval; dates are illustrative.",
+    "category": "dividend",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-010-sample-only-rating-agency-downgrades",
+    "ticker": "POWERGRID",
+    "company": "Power Grid Corporation of India Limited",
+    "time": "2026-11-14T16:54:48",
+    "subject": "SAMPLE ONLY — Rating agency downgrades long-term bank facilities to AA+ from AAA; outlook stable. Illustrative event.",
+    "category": "credit_rating",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-011-sample-only-company-receives-an-illu",
+    "ticker": "ETERNAL",
+    "company": "Eternal Limited",
+    "time": "2026-11-14T16:24:48",
+    "subject": "SAMPLE ONLY — Company receives an illustrative regulatory order imposing a ₹12 crore penalty; appeal options under review.",
+    "category": "litigation",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-012-sample-only-receives-illustrative-18",
+    "ticker": "CDSL",
+    "company": "Central Depository Services (India) Limited",
+    "time": "2026-11-14T15:55:24",
+    "subject": "SAMPLE ONLY — Receives illustrative ₹185 crore technology services order, to be executed over 24 months.",
+    "category": "press_release",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-013-sample-only-wins-illustrative-multi-",
+    "ticker": "TRENT",
+    "company": "Trent Limited",
+    "time": "2026-11-14T15:26:00",
+    "subject": "SAMPLE ONLY — Wins illustrative multi-year supply order valued at ₹96 crore; execution begins this quarter.",
+    "category": "press_release",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-014-sample-only-promoter-group-reports-r",
+    "ticker": "POLYCAB",
+    "company": "Polycab India Limited",
+    "time": "2026-11-14T14:56:36",
+    "subject": "SAMPLE ONLY — Promoter group reports release of 1.2 lakh pledged shares; illustrative disclosure.",
+    "category": "pledging",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-015-sample-only-allotment-of-1-250-equit",
+    "ticker": "TATASTEEL",
+    "company": "Tata Steel Limited",
+    "time": "2026-11-14T16:48:48",
+    "subject": "SAMPLE ONLY — Allotment of 1,250 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-016-sample-only-quarterly-compliance-cer",
+    "ticker": "ETERNAL",
+    "company": "Eternal Limited",
+    "time": "2026-11-14T13:57:48",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-017-sample-only-newspaper-advertisement-",
+    "ticker": "DOMS",
+    "company": "DOMS Industries Limited",
+    "time": "2026-11-14T13:28:24",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-018-sample-only-trading-window-closure-f",
+    "ticker": "LT",
+    "company": "Larsen & Toubro Limited",
+    "time": "2026-11-14T12:59:00",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-019-sample-only-allotment-of-1-398-equit",
+    "ticker": "POLYCAB",
+    "company": "Polycab India Limited",
+    "time": "2026-11-14T12:29:36",
+    "subject": "SAMPLE ONLY — Allotment of 1,398 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-020-sample-only-quarterly-compliance-cer",
+    "ticker": "INFY",
+    "company": "Infosys Limited",
+    "time": "2026-11-14T12:00:12",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-021-sample-only-newspaper-advertisement-",
+    "ticker": "POWERGRID",
+    "company": "Power Grid Corporation of India Limited",
+    "time": "2026-11-14T11:30:48",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-022-sample-only-trading-window-closure-f",
+    "ticker": "APLAPOLLO",
+    "company": "APL Apollo Tubes Limited",
+    "time": "2026-11-14T11:01:24",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-023-sample-only-allotment-of-1-546-equit",
+    "ticker": "ITC",
+    "company": "ITC Limited",
+    "time": "2026-11-14T10:32:00",
+    "subject": "SAMPLE ONLY — Allotment of 1,546 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-024-sample-only-quarterly-compliance-cer",
+    "ticker": "TRENT",
+    "company": "Trent Limited",
+    "time": "2026-11-14T10:02:36",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-025-sample-only-newspaper-advertisement-",
+    "ticker": "HDFCBANK",
+    "company": "HDFC Bank Limited",
+    "time": "2026-11-14T09:33:12",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-026-sample-only-trading-window-closure-f",
+    "ticker": "MARUTI",
+    "company": "Maruti Suzuki India Limited",
+    "time": "2026-11-14T09:03:48",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-027-sample-only-allotment-of-1-694-equit",
+    "ticker": "KAYNES",
+    "company": "Kaynes Technology India Limited",
+    "time": "2026-11-14T08:34:24",
+    "subject": "SAMPLE ONLY — Allotment of 1,694 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-028-sample-only-quarterly-compliance-cer",
+    "ticker": "SUNPHARMA",
+    "company": "Sun Pharmaceutical Industries Limited",
+    "time": "2026-11-14T08:05:00",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-029-sample-only-newspaper-advertisement-",
+    "ticker": "CDSL",
+    "company": "Central Depository Services (India) Limited",
+    "time": "2026-11-14T07:35:36",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-030-sample-only-trading-window-closure-f",
+    "ticker": "RELIANCE",
+    "company": "Reliance Industries Limited",
+    "time": "2026-11-14T07:06:12",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-031-sample-only-allotment-of-1-842-equit",
+    "ticker": "BHARTIARTL",
+    "company": "Bharti Airtel Limited",
+    "time": "2026-11-14T06:36:48",
+    "subject": "SAMPLE ONLY — Allotment of 1,842 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-032-sample-only-quarterly-compliance-cer",
+    "ticker": "BSE",
+    "company": "BSE Limited",
+    "time": "2026-11-14T06:07:24",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-033-sample-only-newspaper-advertisement-",
+    "ticker": "TATASTEEL",
+    "company": "Tata Steel Limited",
+    "time": "2026-11-14T05:38:00",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-034-sample-only-trading-window-closure-f",
+    "ticker": "ETERNAL",
+    "company": "Eternal Limited",
+    "time": "2026-11-14T05:08:36",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-035-sample-only-allotment-of-1-990-equit",
+    "ticker": "DOMS",
+    "company": "DOMS Industries Limited",
+    "time": "2026-11-14T04:39:12",
+    "subject": "SAMPLE ONLY — Allotment of 1,990 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-036-sample-only-quarterly-compliance-cer",
+    "ticker": "LT",
+    "company": "Larsen & Toubro Limited",
+    "time": "2026-11-14T04:09:48",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-037-sample-only-newspaper-advertisement-",
+    "ticker": "POLYCAB",
+    "company": "Polycab India Limited",
+    "time": "2026-11-14T03:40:24",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-038-sample-only-trading-window-closure-f",
+    "ticker": "INFY",
+    "company": "Infosys Limited",
+    "time": "2026-11-14T03:11:00",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-039-sample-only-allotment-of-2-138-equit",
+    "ticker": "POWERGRID",
+    "company": "Power Grid Corporation of India Limited",
+    "time": "2026-11-14T02:41:36",
+    "subject": "SAMPLE ONLY — Allotment of 2,138 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-040-sample-only-quarterly-compliance-cer",
+    "ticker": "APLAPOLLO",
+    "company": "APL Apollo Tubes Limited",
+    "time": "2026-11-14T02:12:12",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-041-sample-only-newspaper-advertisement-",
+    "ticker": "ITC",
+    "company": "ITC Limited",
+    "time": "2026-11-14T01:42:48",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-042-sample-only-trading-window-closure-f",
+    "ticker": "TRENT",
+    "company": "Trent Limited",
+    "time": "2026-11-14T01:13:24",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-043-sample-only-allotment-of-2-286-equit",
+    "ticker": "HDFCBANK",
+    "company": "HDFC Bank Limited",
+    "time": "2026-11-14T00:44:00",
+    "subject": "SAMPLE ONLY — Allotment of 2,286 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-044-sample-only-quarterly-compliance-cer",
+    "ticker": "MARUTI",
+    "company": "Maruti Suzuki India Limited",
+    "time": "2026-11-14T00:14:36",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-045-sample-only-newspaper-advertisement-",
+    "ticker": "KAYNES",
+    "company": "Kaynes Technology India Limited",
+    "time": "2026-11-13T20:42:48",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-046-sample-only-trading-window-closure-f",
+    "ticker": "SUNPHARMA",
+    "company": "Sun Pharmaceutical Industries Limited",
+    "time": "2026-11-13T16:30:48",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-047-sample-only-allotment-of-2-434-equit",
+    "ticker": "CDSL",
+    "company": "Central Depository Services (India) Limited",
+    "time": "2026-11-13T12:18:48",
+    "subject": "SAMPLE ONLY — Allotment of 2,434 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-048-sample-only-quarterly-compliance-cer",
+    "ticker": "RELIANCE",
+    "company": "Reliance Industries Limited",
+    "time": "2026-11-13T08:06:48",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-049-sample-only-newspaper-advertisement-",
+    "ticker": "BHARTIARTL",
+    "company": "Bharti Airtel Limited",
+    "time": "2026-11-13T03:54:48",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-050-sample-only-trading-window-closure-f",
+    "ticker": "BSE",
+    "company": "BSE Limited",
+    "time": "2026-11-12T23:42:48",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-051-sample-only-allotment-of-2-582-equit",
+    "ticker": "TATASTEEL",
+    "company": "Tata Steel Limited",
+    "time": "2026-11-12T19:30:48",
+    "subject": "SAMPLE ONLY — Allotment of 2,582 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-052-sample-only-quarterly-compliance-cer",
+    "ticker": "ETERNAL",
+    "company": "Eternal Limited",
+    "time": "2026-11-12T15:18:48",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-053-sample-only-newspaper-advertisement-",
+    "ticker": "DOMS",
+    "company": "DOMS Industries Limited",
+    "time": "2026-11-12T11:06:48",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-054-sample-only-trading-window-closure-f",
+    "ticker": "LT",
+    "company": "Larsen & Toubro Limited",
+    "time": "2026-11-12T06:54:48",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-055-sample-only-allotment-of-2-730-equit",
+    "ticker": "POLYCAB",
+    "company": "Polycab India Limited",
+    "time": "2026-11-11T16:42:48",
+    "subject": "SAMPLE ONLY — Allotment of 2,730 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-056-sample-only-quarterly-compliance-cer",
+    "ticker": "INFY",
+    "company": "Infosys Limited",
+    "time": "2026-11-11T00:12:48",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-057-sample-only-newspaper-advertisement-",
+    "ticker": "POWERGRID",
+    "company": "Power Grid Corporation of India Limited",
+    "time": "2026-11-10T07:42:48",
+    "subject": "SAMPLE ONLY — Newspaper advertisement confirming dispatch/publication of shareholder notice; illustrative filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-058-sample-only-trading-window-closure-f",
+    "ticker": "APLAPOLLO",
+    "company": "APL Apollo Tubes Limited",
+    "time": "2026-11-09T15:12:48",
+    "subject": "SAMPLE ONLY — Trading window closure for designated persons ahead of the results period; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-059-sample-only-allotment-of-2-878-equit",
+    "ticker": "ITC",
+    "company": "ITC Limited",
+    "time": "2026-11-08T22:42:48",
+    "subject": "SAMPLE ONLY — Allotment of 2,878 equity shares under the employee stock option plan; illustrative notice.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  },
+  {
+    "id": "sample-060-sample-only-quarterly-compliance-cer",
+    "ticker": "TRENT",
+    "company": "Trent Limited",
+    "time": "2026-11-08T06:12:48",
+    "subject": "SAMPLE ONLY — Quarterly compliance certificate under SEBI listing regulations; illustrative routine filing.",
+    "category": "unclassified",
+    "attachment_link": "",
+    "source": "sample"
+  }
+]

@@ -1,0 +1,6 @@
+[
+  { "ticker": "INFY", "company_name": "Infosys Limited", "sector": "IT services", "in_portfolio": true },
+  { "ticker": "HDFCBANK", "company_name": "HDFC Bank Limited", "sector": "Banking", "in_portfolio": true },
+  { "ticker": "KAYNES", "company_name": "Kaynes Technology India Limited", "sector": "Electronics manufacturing", "in_portfolio": true },
+  { "ticker": "TATACONSUM", "company_name": "Tata Consumer Products Limited", "sector": "Consumer goods", "in_portfolio": false }
+]
