@@ -10,3 +10,4 @@ __pycache__/
 backend/data/*.sqlite3
 backend/data/*.bak
 build-history/
+.DS_Store
