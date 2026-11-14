@@ -8,6 +8,7 @@ COPY frontend/src ./frontend/src
 COPY frontend/*.json ./frontend/
 COPY frontend/*.js ./frontend/
 COPY frontend/*.ts ./frontend/
+COPY frontend/index.html ./frontend/
 COPY config ./config
 COPY fixtures ./fixtures
 RUN cd frontend && npm run build
