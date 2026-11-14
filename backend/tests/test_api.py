@@ -1,3 +1,4 @@
+import json
 import os
 import tempfile
 import unittest
@@ -48,6 +49,15 @@ class FixtureApiTests(unittest.TestCase):
         self.assertTrue(payload["found"])
         self.assertEqual(payload["ticker"], "RELIANCE")
         self.assertIn("metrics", payload)
+
+    def test_portfolio_returns_every_configured_ticker(self):
+        response = self.client.get("/api/portfolio")
+        self.assertEqual(response.status_code, 200)
+        portfolio = json.loads((Path(__file__).resolve().parents[2] / "config" / "portfolio.json").read_text())
+        self.assertEqual(
+            {item["ticker"] for item in response.json()},
+            {item["ticker"] for item in portfolio},
+        )
 
 
 if __name__ == "__main__":

@@ -8,6 +8,7 @@ from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from datetime import datetime, timedelta
 
 from .db import initialize_database
 from .fixture_bootstrap import seed_from_fixtures
@@ -54,8 +55,45 @@ def health() -> dict:
 
 
 @app.get("/api/portfolio")
-def portfolio() -> Any:
-    return read_config("portfolio.json")
+def portfolio() -> list[dict[str, Any]]:
+    companies = read_config("portfolio.json")
+    price_history: dict[str, list[dict[str, Any]]] = {}
+    for row in list_prices():
+        price_history.setdefault(row["ticker"], []).append(row)
+
+    active_alert_tickers = {item["ticker"] for item in list_alerts().get("alerts", [])}
+    recent_filings: dict[str, list[dict[str, Any]]] = {}
+    cutoff = datetime.now() - timedelta(days=7)
+    for item in list_digest(hours=168):
+        try:
+            filing_time = datetime.fromisoformat(str(item["time"]).replace("Z", "+00:00"))
+            filing_time = filing_time.replace(tzinfo=None)
+        except (KeyError, TypeError, ValueError):
+            continue
+        if filing_time >= cutoff:
+            recent_filings.setdefault(item["ticker"], []).append(item)
+
+    result = []
+    for company in companies:
+        ticker = str(company["ticker"]).upper()
+        history = sorted(price_history.get(ticker, []), key=lambda row: row["date"], reverse=True)
+        last_close = float(history[0]["close"]) if history else None
+        day_change_pct = None
+        if len(history) > 1 and float(history[1]["close"]) != 0:
+            day_change_pct = (last_close - float(history[1]["close"])) / float(history[1]["close"]) * 100
+        filings = recent_filings.get(ticker, [])
+        result.append({
+            "ticker": ticker,
+            "company_name": company["company_name"],
+            "sector": company["sector"],
+            "size": company["size"],
+            "last_close": last_close,
+            "day_change_pct": day_change_pct,
+            "has_alert": ticker in active_alert_tickers,
+            "filings_7d": len(filings),
+            "top_level": min((item["level"] for item in filings), default=None),
+        })
+    return result
 
 
 @app.get("/api/research-demo")

@@ -12,13 +12,14 @@ import {
   Search,
   Settings2,
   Sparkles,
+  Star,
   TrendingUp,
 } from "lucide-react";
 import priceFixture from "../../fixtures/prices.json";
 import announcementFixture from "../../fixtures/announcements.json";
 import researchDemo from "../../config/research_demo.json";
 
-type Screen = "digest" | "alerts" | "research";
+type Screen = "digest" | "alerts" | "portfolio" | "research";
 type Decision = "watch" | "dismiss";
 type PriceRow = { ticker: string; date: string; close: number; volume: number; source?: string };
 type Announcement = {
@@ -53,6 +54,17 @@ type AlertItem = {
   summary: string;
 };
 type Rules = { volume_multiplier: number; price_change_percent: number };
+type PortfolioEntry = {
+  ticker: string;
+  company_name: string;
+  sector: string;
+  size: string;
+  last_close: number | null;
+  day_change_pct: number | null;
+  has_alert: boolean;
+  filings_7d: number;
+  top_level: number | null;
+};
 type DecisionMap = Record<string, Decision>;
 type FixturePrices = { prices: Record<string, Array<{ date: string; close: number; volume: number }>> };
 type TrendMetrics = {
@@ -109,8 +121,10 @@ export default function App() {
   const [screen, setScreen] = useState<Screen>("digest");
   const [hours, setHours] = useState(24);
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
+  const [watchAnnouncements, setWatchAnnouncements] = useState<Announcement[]>([]);
   const [topItems, setTopItems] = useState<TopItem[]>([]);
   const [alerts, setAlerts] = useState<AlertItem[]>([]);
+  const [portfolio, setPortfolio] = useState<PortfolioEntry[]>([]);
   const [prices, setPrices] = useState<PriceRow[]>([]);
   const [rules, setRules] = useState<Rules>(() => readStoredRules());
   const [ruleDraft, setRuleDraft] = useState<Rules>(() => readStoredRules());
@@ -130,11 +144,13 @@ export default function App() {
     let current = true;
     setLoading(true);
     async function loadPush() {
-      const [digestResponse, alertsResponse, rulesResponse, pricesResponse] = await Promise.all([
+      const [digestResponse, alertsResponse, rulesResponse, pricesResponse, portfolioResponse, watchDigestResponse] = await Promise.all([
         getJson<{ announcements?: Announcement[]; top_items?: TopItem[] }>(`/api/digest?hours=${hours}`),
         getJson<{ alerts?: AlertItem[] }>("/api/alerts"),
         getJson<Rules>("/api/alert-rules"),
         getJson<{ prices?: PriceRow[] }>("/api/prices"),
+        getJson<PortfolioEntry[]>("/api/portfolio"),
+        getJson<{ announcements?: Announcement[] }>("/api/digest?hours=168"),
       ]);
       if (!current) return;
 
@@ -155,8 +171,10 @@ export default function App() {
       setRules({ volume_multiplier: loadedRules.volume_multiplier, price_change_percent: loadedRules.price_change_percent });
       setRuleDraft({ volume_multiplier: loadedRules.volume_multiplier, price_change_percent: loadedRules.price_change_percent });
       setAnnouncements(digestItems);
+      setWatchAnnouncements(watchDigestResponse?.announcements ?? fallbackDigest(fixtureAnnouncements, 168));
       setTopItems(digestResponse?.top_items ?? []);
       setAlerts(alertItems);
+      setPortfolio(portfolioResponse ?? []);
       const fixtureOnly = !digestResponse || !alertsResponse || !pricesResponse || !rulesResponse;
       const hasLivePriceRows = priceRows.some((row) => row.source === "yfinance");
       const hasSampleData = digestItems.some((item) => item.source === "sample")
@@ -199,6 +217,26 @@ export default function App() {
   const levelTwo = visibleAnnouncements.filter((item) => item.level === 2);
   const levelThree = visibleAnnouncements.filter((item) => item.level !== 1 && item.level !== 2);
   const visibleAlerts = alerts.filter((item) => decisions[alertId(item)] !== "dismiss");
+  const watchedTickers = useMemo(() => {
+    const tickers = new Set<string>();
+    for (const item of [...announcements, ...watchAnnouncements, ...fixtureAnnouncements]) {
+      if (decisions[announcementId(item)] === "watch") tickers.add(item.ticker.toUpperCase());
+    }
+    for (const item of alerts) {
+      if (decisions[alertId(item)] === "watch") tickers.add(item.ticker.toUpperCase());
+    }
+    for (const [id, decision] of Object.entries(decisions)) {
+      if (decision !== "watch") continue;
+      const ticker = id.split(":", 1)[0]?.toUpperCase();
+      if (portfolio.some((item) => item.ticker.toUpperCase() === ticker)) tickers.add(ticker);
+    }
+    return tickers;
+  }, [announcements, watchAnnouncements, alerts, decisions, portfolio]);
+  const sortedPortfolio = useMemo(
+    () => portfolio.map((item) => ({ ...item, watched: watchedTickers.has(item.ticker.toUpperCase()) }))
+      .sort((left, right) => Number(right.watched) - Number(left.watched) || left.ticker.localeCompare(right.ticker)),
+    [portfolio, watchedTickers],
+  );
 
   function decide(id: string, value: Decision) {
     setDecisions((current) => {
@@ -349,6 +387,37 @@ export default function App() {
           </section>
         )}
 
+        {screen === "portfolio" && (
+          <section aria-labelledby="portfolio-title" className="portfolio-screen">
+            <div className="section-kicker"><span>YOUR HOLDINGS</span><span className="kicker-rule" /></div>
+            <div className="title-row"><div><h1 id="portfolio-title">Portfolio</h1><p className="subhead">A quick read across your companies.</p></div></div>
+            <p className="portfolio-summary">{portfolioSummary(portfolio)}</p>
+            {loading ? <DigestSkeleton /> : (
+              <div className="portfolio-list">
+                {sortedPortfolio.map((item) => (
+                  <button key={item.ticker} className="portfolio-row" onClick={() => openResearch(item.ticker)} aria-label={`Open ${item.company_name} research`}>
+                    <span className="portfolio-row-main">
+                      <span className="portfolio-name-line">
+                        {item.watched && <Star size={12} className="portfolio-star" fill="currentColor" aria-label="Watched" />}
+                        <strong>{item.ticker}</strong>
+                        {item.has_alert && <span className="portfolio-alert">ALERT</span>}
+                      </span>
+                      <span className="portfolio-company">{item.company_name}</span>
+                      <span className="portfolio-sector-line"><span>{item.sector}</span><span className="portfolio-filings">{item.filings_7d} filings · 7d</span></span>
+                    </span>
+                    <span className="portfolio-market">
+                      <strong className="portfolio-price">{item.last_close === null ? "—" : formatPrice(item.last_close)}</strong>
+                      <span className={`portfolio-change ${item.day_change_pct === null ? "change-flat" : item.day_change_pct >= 0 ? "change-up" : "change-down"}`}>
+                        {item.day_change_pct === null ? "—" : formatPercent(item.day_change_pct)}
+                      </span>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
         {screen === "research" && (
           <ResearchPage
             ticker={researchTicker}
@@ -368,6 +437,7 @@ export default function App() {
       <nav className="bottom-nav" aria-label="Main navigation">
         <NavItem active={screen === "digest"} onClick={() => setScreen("digest")} icon={<Sparkles size={17} />} label="Digest" />
         <NavItem active={screen === "alerts"} onClick={() => setScreen("alerts")} icon={<Bell size={17} />} label="Alerts" badge={!loading && visibleAlerts.length > 0 ? visibleAlerts.length : undefined} />
+        <NavItem active={screen === "portfolio"} onClick={() => setScreen("portfolio")} icon={<TrendingUp size={17} />} label="Portfolio" />
         <NavItem active={screen === "research"} onClick={() => setScreen("research")} icon={<Search size={17} />} label="Research" />
       </nav>
       {toast && <div role="status" className="toast"><Check size={14} /> {toast}</div>}
@@ -679,6 +749,13 @@ function formatSavedDate(value?: string): string {
 function formatPercent(value?: number | null): string {
   if (value === null || value === undefined || !Number.isFinite(value)) return "—";
   return `${value < 0 ? "−" : "+"}${Math.abs(value).toFixed(1)}%`;
+}
+
+function portfolioSummary(items: PortfolioEntry[]): string {
+  const up = items.filter((item) => item.day_change_pct !== null && item.day_change_pct > 0).length;
+  const down = items.filter((item) => item.day_change_pct !== null && item.day_change_pct < 0).length;
+  const alertCount = items.filter((item) => item.has_alert).length;
+  return `${items.length} companies, ${up} up, ${down} down, ${alertCount} alerts`;
 }
 
 function formatRatio(value?: number | null): string {

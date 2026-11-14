@@ -41,6 +41,26 @@ h1 { margin: 0; color: #f3f2eb; font-size: 29px; line-height: 1.12; font-weight:
 .period-option { min-height: 31px; color: #82897c; border: 0; border-radius: 7px; background: transparent; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 700; letter-spacing: .08em; transition: background .16s, color .16s; }
 .period-option.active { color: #171c13; background: #b7d975; box-shadow: 0 1px 12px #b7d97522; }
 .digest-meta { margin: 21px 1px 10px; display: flex; gap: 7px; color: #7f8779; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
+.portfolio-screen { min-width: 0; }
+.portfolio-summary { margin: 17px 0 12px; color: #aeb7a5; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 9px; letter-spacing: .025em; }
+.portfolio-list { display: flex; flex-direction: column; gap: 6px; }
+.portfolio-row { width: 100%; min-width: 0; min-height: 69px; padding: 9px 10px; display: flex; align-items: center; justify-content: space-between; gap: 9px; overflow: hidden; border: 1px solid #2d352a; border-radius: 9px; color: inherit; background: #171b16; text-align: left; }
+.portfolio-row:active { border-color: #66784c; background: #1c2219; }
+.portfolio-row-main { min-width: 0; flex: 1 1 auto; display: flex; flex-direction: column; gap: 4px; }
+.portfolio-name-line { min-width: 0; display: flex; align-items: center; gap: 5px; color: #dfe6d4; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; }
+.portfolio-name-line strong { font-size: 10px; font-weight: 700; }
+.portfolio-star { flex: 0 0 auto; color: #c6e58e; }
+.portfolio-alert { padding: 2px 4px; border: 1px solid #68453f; border-radius: 4px; color: #ffaaa0; background: #382421; font-size: 7px; font-weight: 700; letter-spacing: .04em; }
+.portfolio-company { overflow: hidden; color: #aeb5a7; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.portfolio-sector-line { min-width: 0; display: flex; align-items: center; gap: 6px; color: #6f796b; font-size: 8px; }
+.portfolio-sector-line > span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.portfolio-filings { flex: 0 0 auto; color: #89937f; white-space: nowrap; }
+.portfolio-market { flex: 0 0 78px; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-variant-numeric: tabular-nums; }
+.portfolio-price { color: #e0e5d8; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 600; white-space: nowrap; }
+.portfolio-change { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 9px; font-weight: 650; white-space: nowrap; }
+.portfolio-change.change-up { color: #b9df80; }
+.portfolio-change.change-down { color: #ff9187; }
+.portfolio-change.change-flat { color: #92998d; }
 .digest-meta span:first-child { color: #c3c8bc; }
 .meta-separator { color: #444b41; }
 .top-three { margin: 0 0 13px; padding: 10px 11px 8px; border: 1px solid #35402e; border-radius: 9px; background: #171c15; }
@@ -208,7 +228,7 @@ h1 { margin: 0; color: #f3f2eb; font-size: 29px; line-height: 1.12; font-weight:
 .research-skeleton .skeleton-line.wide { height: 18px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-.bottom-nav { position: fixed; z-index: 10; bottom: 0; left: 50%; width: min(100%, 520px); height: calc(63px + env(safe-area-inset-bottom)); padding: 8px 16px calc(8px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: repeat(3, 1fr); transform: translateX(-50%); border-top: 1px solid #292e27; background: #131612; }
+.bottom-nav { position: fixed; z-index: 10; bottom: 0; left: 50%; width: min(100%, 520px); height: calc(63px + env(safe-area-inset-bottom)); padding: 8px 16px calc(8px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: repeat(4, 1fr); transform: translateX(-50%); border-top: 1px solid #292e27; background: #131612; }
 .nav-item { position: relative; min-height: 43px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 0; color: #7e8679; background: transparent; font-size: 8px; font-weight: 580; letter-spacing: .02em; }
 .nav-item.active { color: #c6e58e; }
 .nav-item.active::before { position: absolute; top: -8px; left: calc(50% - 8px); width: 16px; height: 2px; content: ""; border-radius: 2px; background: #b6da78; box-shadow: 0 0 9px #b6da7866; }
